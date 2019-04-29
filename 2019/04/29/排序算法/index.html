@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最常见最">
+<meta name="description" content="最常见 面试最容易被问到的三种排序算法 快速排序  希尔排序  归并排序以下是不全的代码，但很容易理解(本来我记在了两张纸上，但他们现在到了被揉烂的边缘~~~~~~~)">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法">
 <meta property="og:url" content="http://guozijing.club/2019/04/29/排序算法/index.html">
 <meta property="og:site_name" content="Guozijing&#39;s Blog">
-<meta property="og:description" content="最常见最">
+<meta property="og:description" content="最常见 面试最容易被问到的三种排序算法 快速排序  希尔排序  归并排序以下是不全的代码，但很容易理解(本来我记在了两张纸上，但他们现在到了被揉烂的边缘~~~~~~~)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-29T03:19:18.894Z">
+<meta property="og:updated_time" content="2019-04-29T12:06:07.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法">
-<meta name="twitter:description" content="最常见最">
+<meta name="twitter:description" content="最常见 面试最容易被问到的三种排序算法 快速排序  希尔排序  归并排序以下是不全的代码，但很容易理解(本来我记在了两张纸上，但他们现在到了被揉烂的边缘~~~~~~~)">
 
 
 
@@ -353,7 +353,14 @@
       
 
       
-        <h4 id="最常见最"><a href="#最常见最" class="headerlink" title="最常见最"></a>最常见最</h4>
+        <h4 id="最常见-面试最容易被问到的三种排序算法"><a href="#最常见-面试最容易被问到的三种排序算法" class="headerlink" title="最常见 面试最容易被问到的三种排序算法"></a>最常见 面试最容易被问到的三种排序算法</h4><blockquote>
+<p>快速排序  希尔排序  归并排序<br>以下是不全的代码，但很容易理解(本来我记在了两张纸上，但他们现在到了被揉烂的边缘~~~~~~~)</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">nums[] //被排序的数组</span><br><span class="line">void quickSort(int &amp; nums[], int left, int right)</span><br><span class="line">&#123;</span><br><span class="line">    if (left&gt;=right) return;</span><br><span class="line">    int base=nums[left]; //每一次把最左边的数移动到排序后的对应位置</span><br><span class="line">    int i=left,j=right;</span><br><span class="line">    while (i&lt;=j)</span><br><span class="line">    &#123;</span><br><span class="line">        while (nums[j]&gt;=base &amp;&amp; j&gt;i) j--;</span><br><span class="line">        if (j&gt;i) nums[i]=nums[j];</span><br><span class="line">        while (j&gt;i &amp;&amp; nums[i]&lt;=base) i++;</span><br><span class="line">        if (j&gt;i) nums[j]=nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    nums[i]=base;</span><br><span class="line">    quickSort(nums,left,i-1);</span><br><span class="line">    quickSort(nums,i+1,right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void shell (int &amp; nums[])</span><br><span class="line">&#123;</span><br><span class="line">    int length=nums.size();</span><br><span class="line">    int gap=length;</span><br><span class="line">    while (gap&gt;1)</span><br><span class="line">    &#123;</span><br><span class="line">        gap=gap/3+1;</span><br><span class="line">        for (int i=gap;i&lt;length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            int j=i-gap;</span><br><span class="line">            while (j&gt;=0 &amp;&amp; nums[j]&gt;nums[i])</span><br><span class="line">            &#123;</span><br><span class="line">                swap(nums[j],nums[i]);</span><br><span class="line">                j=j-gap;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">nums[]  length </span><br><span class="line">void guibing(nums,left,right)</span><br><span class="line">&#123;</span><br><span class="line">    if (left&gt;=right) return;</span><br><span class="line">    int mid=(left+right)/2;</span><br><span class="line">    guibing(nums,left,mid);</span><br><span class="line">    guibing(nums,mid+1,right);</span><br><span class="line">    merge(nums,left,mid,right);</span><br><span class="line">&#125;</span><br><span class="line">void merge(nums,left,mid,right)</span><br><span class="line">&#123;</span><br><span class="line">    int temp[right-left+1];</span><br><span class="line">    int i=left,j=mid+1,k=0;</span><br><span class="line">    while (i&lt;=mid &amp;&amp; j&lt;=right)</span><br><span class="line">    &#123;</span><br><span class="line">        if (nums[i]&lt;=nums[j])</span><br><span class="line">        &#123;</span><br><span class="line">            temp[k]=nums[i];</span><br><span class="line">            k++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            temp[k]=a[j];</span><br><span class="line">            k++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if ··········;</span><br><span class="line">    if ··········; //把剩下的补全</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -600,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#最常见最"><span class="nav-number">1.</span> <span class="nav-text">最常见最</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#最常见-面试最容易被问到的三种排序算法"><span class="nav-number">1.</span> <span class="nav-text">最常见 面试最容易被问到的三种排序算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#希尔排序"><span class="nav-number">3.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并排序"><span class="nav-number">4.</span> <span class="nav-text">归并排序</span></a></li></ol></div>
             
 
           </div>
