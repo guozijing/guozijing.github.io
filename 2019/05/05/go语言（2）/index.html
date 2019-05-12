@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="golang,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="愿有人陪你颠沛流离，如果没有，愿你成为自己的太阳！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Guozijing&#39;s Blog">
-<meta property="og:url" content="http://guozijing.club/categories/后端/index.html">
+<meta name="description" content="数组12var &amp;lt;name&amp;gt; [n] inta:=[...]int&amp;#123;1,1&amp;#125; / &amp;#123;19: 1&amp;#125;-&amp;gt;索引19值为1 slice 切片 切片用处：当数组长度不确定时，可以使用切片1234567891011121314151617创建切片 s1:= a[5:10] a数组的5 6 7 8 9 var &amp;lt;name&amp;gt; []type =">
+<meta name="keywords" content="golang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="go语言（1）">
+<meta property="og:url" content="http://guozijing.club/2019/05/05/go语言（2）/index.html">
 <meta property="og:site_name" content="Guozijing&#39;s Blog">
-<meta property="og:description" content="愿有人陪你颠沛流离，如果没有，愿你成为自己的太阳！">
+<meta property="og:description" content="数组12var &amp;lt;name&amp;gt; [n] inta:=[...]int&amp;#123;1,1&amp;#125; / &amp;#123;19: 1&amp;#125;-&amp;gt;索引19值为1 slice 切片 切片用处：当数组长度不确定时，可以使用切片1234567891011121314151617创建切片 s1:= a[5:10] a数组的5 6 7 8 9 var &amp;lt;name&amp;gt; []type =">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-12T13:17:41.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guozijing&#39;s Blog">
-<meta name="twitter:description" content="愿有人陪你颠沛流离，如果没有，愿你成为自己的太阳！">
+<meta name="twitter:title" content="go语言（1）">
+<meta name="twitter:description" content="数组12var &amp;lt;name&amp;gt; [n] inta:=[...]int&amp;#123;1,1&amp;#125; / &amp;#123;19: 1&amp;#125;-&amp;gt;索引19值为1 slice 切片 切片用处：当数组长度不确定时，可以使用切片1234567891011121314151617创建切片 s1:= a[5:10] a数组的5 6 7 8 9 var &amp;lt;name&amp;gt; []type =">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://guozijing.club/categories/后端/">
+  <link rel="canonical" href="http://guozijing.club/2019/05/05/go语言（2）/">
 
 
 
 
 
-  <title>分类: 后端 | Guozijing's Blog</title>
+  <title>go语言（1） | Guozijing's Blog</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/guozijing" class="github-corner" aria-label="View source on GitHub"><svg width="150" height="150" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     
@@ -248,131 +250,213 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>后端<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://guozijing.club/2019/05/05/go语言（2）/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guozijing">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Guozijing's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/05/05/websocket随笔/" itemprop="url">
-              
-                <span itemprop="name">websocket随笔</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">go语言（1）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-05T11:35:24+08:00" content="2019-05-05">
-          05-05
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-05T11:04:15+08:00">
+                2019-05-05
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/05/ajax了解/" itemprop="url">
-              
-                <span itemprop="name">ajax了解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-05T11:21:38+08:00" content="2019-05-05">
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/05/go语言（1）/" itemprop="url">
-              
-                <span itemprop="name">go语言（1）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-05T11:04:15+08:00" content="2019-05-05">
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/05/go语言（2）/" itemprop="url">
-              
-                <span itemprop="name">go语言（1）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-05T11:04:15+08:00" content="2019-05-05">
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+        <h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &lt;name&gt; [n] int</span><br><span class="line">a:=[...]int&#123;1,1&#125; / &#123;19: 1&#125;-&gt;索引19值为1</span><br></pre></td></tr></table></figure>
+<h4 id="slice-切片"><a href="#slice-切片" class="headerlink" title="slice 切片"></a>slice 切片</h4><blockquote>
+<p>切片用处：当数组长度不确定时，可以使用切片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">创建切片</span><br><span class="line"> s1:= a[5:10] a数组的5 6 7 8 9</span><br><span class="line"> var &lt;name&gt; []type = make([]type, len, cap) len大小 cap容量</span><br><span class="line">func main() &#123;</span><br><span class="line">	var b =[5]int&#123;1,2,3,4,5&#125;</span><br><span class="line">	a := []int &#123;1,2,3,4,5&#125;</span><br><span class="line">	s1 := a[2:5]</span><br><span class="line">	s1[1]=0  // 此处会改变a的值</span><br><span class="line">	fmt.Println(s1)</span><br><span class="line">	fmt.Println(b)</span><br><span class="line">	fmt.Println(a)</span><br><span class="line">	s1 = append(s1,1,2,3) // 存储地址改变 不会改变a的值</span><br><span class="line">	fmt.Println(s1)</span><br><span class="line">	s1[1]=2</span><br><span class="line">	fmt.Println(s1)</span><br><span class="line">	fmt.Println(a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>string 可以进行slice处理<br>string 不可变 不能直接通过str[0]=’a’来改变<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 改变string</span><br><span class="line">arr1 := []byte(str)</span><br><span class="line">arr1[0]=&apos;a&apos;</span><br><span class="line">str = string(arr1)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 使用切片实现斐波那契数列</span><br><span class="line">func (n int) ([]uint64) &#123;</span><br><span class="line">    fbn := make ([]uint64, n)</span><br><span class="line">    fbn[0]=1</span><br><span class="line">    fbn[1]=1</span><br><span class="line">    for i:=2; i&lt;n; i++ &#123;</span><br><span class="line">        fbn[i]= fbn[i-1]+fbn[i-2]</span><br><span class="line">    &#125;</span><br><span class="line">    return fbn</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果您喜欢可以打赏我哦，O(∩_∩)O谢谢。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WechatIMG20.png" alt="Guozijing 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/WechatIMG21.jpg" alt="Guozijing 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/golang/" rel="tag"><i class="fa fa-google"></i> golang</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/05/go语言（1）/" rel="next" title="go语言（1）">
+                <i class="fa fa-chevron-left"></i> go语言（1）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/05/ajax了解/" rel="prev" title="ajax了解">
+                ajax了解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -380,6 +464,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -400,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +602,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice-切片"><span class="nav-number">2.</span> <span class="nav-text">slice 切片</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -668,6 +781,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
